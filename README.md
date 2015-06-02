@@ -1,4 +1,4 @@
-# hexo-generator-feed
+# hexo-algolia
 
 Index content in Algolia Search API.
 
