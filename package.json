@@ -1,0 +1,26 @@
+{
+  "name": "hexo-algolia",
+  "version": "0.0.1",
+  "description": "Algolia plugin for Hexo",
+  "main": "index",
+  "directories": {
+    "lib": "./lib"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "keywords": [
+    "hexo",
+    "algolia",
+    "search"
+  ],
+  "author": {
+    "name": "Boris Schapira",
+    "email": "borisschapira@gmail.com",
+    "url": "http://borisschapira.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "algoliasearch": "^3.4.0"
+  }
+}
