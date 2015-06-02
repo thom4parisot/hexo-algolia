@@ -4,9 +4,6 @@
 var assign = require('object-assign');
 
 var config = hexo.config.algolia = assign({
-	applicationID: '',
-	apiKey: '',
-	indexName: '',
 	chunkSize: 5000
 }, hexo.config.algolia);
 

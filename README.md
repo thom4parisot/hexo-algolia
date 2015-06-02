@@ -10,11 +10,13 @@ You can configure this plugin in `_config.yml`.
 algolia:
   applicationID: 'applicationID'
   apiKey: 'apiKey'
+  adminApiKey: 'adminApiKey'
   indexName: 'indexName'
   chunkSize: 5000
 ```
 
 - **applicationID** - Your application Id
-- **apiKey** - Your API key
+- **apiKey** - Your API key (for read-only operation, like search)
+- **adminApiKey** - Your admin API key, used for create, update and delete on your indices
 - **indexName** - The name of the index to use
 - **chunkSize** - Content to index is split in chunks, to get a good indexing/insert performance (Default: 5'000)
