@@ -1,7 +1,7 @@
 {
   "name": "hexo-algolia",
   "version": "0.0.1",
-  "description": "Algolia plugin for Hexo",
+  "description": "Index your content in Algolia Search API",
   "main": "index",
   "directories": {
     "lib": "./lib"
@@ -21,6 +21,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "algoliasearch": "^3.4.0"
+    "algoliasearch": "^3.4.0",
+    "async": "^1.1.0",
+    "lodash": "^3.9.3",
+    "object-assign": "^2.0.0"
   }
 }
