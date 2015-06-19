@@ -1,6 +1,6 @@
 {
   "name": "hexo-algolia",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Index your content in Algolia Search API",
   "main": "index",
   "directories": {
