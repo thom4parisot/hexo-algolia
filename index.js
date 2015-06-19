@@ -12,6 +12,6 @@ var box = hexo.source;
 hexo.extend.console.register('algolia', 'Index your content in Algolia Search API', {
   options: [
     {name: '-f, --fake', desc: 'Does not push content to Algolia'},
-    {name: '-w, --without-reset', desc: 'Resets the Algolia index before starting the indexation'}
+    {name: '-w, --without-reset', desc: 'Does nos reset the Algolia index before starting the indexation'}
   ]
 }, require('./lib/command'));
