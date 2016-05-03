@@ -1,7 +1,7 @@
 /* globals hexo:false, console:false*/
 'use strict';
 
-var assign = require('object-assign');
+var assign = require('lodash').assign;
 
 var config = hexo.config.algolia = assign({
 	chunkSize: 5000

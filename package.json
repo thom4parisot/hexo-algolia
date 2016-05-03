@@ -30,9 +30,7 @@
   "homepage": "https://github.com/borisschapira/hexo-algolia",
   "dependencies": {
     "algoliasearch": "^3.4.0",
-    "async": "^1.1.0",
     "bluebird": "^2.9.27",
-    "lodash": "^3.9.3",
-    "object-assign": "^2.0.0"
+    "lodash": "^4.0.0"
   }
 }
