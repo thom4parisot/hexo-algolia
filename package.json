@@ -6,9 +6,12 @@
   "directories": {
     "lib": "./lib"
   },
+  "scripts": {
+    "test": "jshint *.js ./lib"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/borisschapira/hexo-algolia.git"
+    "url": "https://github.com/oncletom/hexo-algolia.git"
   },
   "engines": {
     "node": ">= 0.12.0"
@@ -25,12 +28,15 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/borisschapira/hexo-algolia/issues"
+    "url": "https://github.com/oncletom/hexo-algolia/issues"
   },
-  "homepage": "https://github.com/borisschapira/hexo-algolia",
+  "homepage": "https://github.com/oncletom/hexo-algolia",
   "dependencies": {
     "algoliasearch": "^3.4.0",
     "each-async": "^1.1.1",
     "lodash": "^4.0.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.3"
   }
 }
