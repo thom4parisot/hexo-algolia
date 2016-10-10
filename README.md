@@ -1,6 +1,6 @@
-# hexo-algolia
+# hexo-algolia [![Build Status](https://travis-ci.org/oncletom/hexo-algolia.svg?branch=master)](https://travis-ci.org/oncletom/hexo-algolia)
 
-Index content in Algolia Search API.
+> Index content in Algolia Search API.
 
 ## Options
 
