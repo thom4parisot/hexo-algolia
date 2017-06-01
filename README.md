@@ -4,6 +4,8 @@
 
 ## Install
 
+Compatible with `node>=4.0.0`.
+
 ```bash
 $ npm install --save hexo-algolia
 ```

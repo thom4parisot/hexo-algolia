@@ -18,6 +18,7 @@
   "node": true,
   "debug": true,
   "globals": {
-      "window": true
+      "window": true,
+      "Promise": true
   }
 }
