@@ -9,7 +9,8 @@ var config = hexo.config.algolia = assign({
 
 hexo.extend.console.register('algolia', 'Index your content in Algolia Search API', {
   options: [
-    {name: '-f, --fake', desc: 'Does not push content to Algolia'},
-    {name: '-w, --without-reset', desc: 'Does not reset the Algolia index before starting the indexation'}
+		{name: '--chunk-size=5000', desc: 'Chunk size for each batch of content to index'},
+    {name: '--dry-run', desc: 'Does not push content to Algolia'},
+    {name: '--flush', desc: 'Does not reset the Algolia index before starting the indexation'}
   ]
 }, require('./lib/command'));
