@@ -3,9 +3,9 @@
 
 var assign = require('lodash').assign;
 
-var config = hexo.config.algolia = assign({
-	chunkSize: 5000
-}, hexo.config.algolia);
+var command = require('./lib/command');
+var searchCdnHelper = require('./lib/helpers/search_cdn.js');
+var searchConfigHelper = require('./lib/helpers/search_config.js');
 
 hexo.extend.console.register('algolia', 'Index your content in Algolia Search API', {
   options: [
@@ -13,4 +13,7 @@ hexo.extend.console.register('algolia', 'Index your content in Algolia Search AP
     {name: '--dry-run', desc: 'Does not push content to Algolia'},
     {name: '--flush', desc: 'Does not reset the Algolia index before starting the indexation'}
   ]
-}, require('./lib/command'));
+}, command);
+
+hexo.extend.helper.register('algolia_search_cdn', searchCdnHelper);
+hexo.extend.helper.register('algolia_search_config', searchConfigHelper(hexo.config));
