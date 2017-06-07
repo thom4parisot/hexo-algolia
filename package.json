@@ -33,7 +33,7 @@
   "homepage": "https://github.com/oncletom/hexo-algolia",
   "dependencies": {
     "algoliasearch": "^3.4.0",
-    "lodash": "^4.0.0"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "jshint": "^2.9.3"
