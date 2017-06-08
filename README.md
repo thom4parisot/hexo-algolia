@@ -12,7 +12,7 @@ $ npm install --save hexo-algolia
 
 ## Public Facing Search Options
 
-You can configure the plugin in your hexo website `_config.yml` file:
+You can configure Algolia integration to your hexo website with the `_config.yml` file:
 
 ``` yaml
 algolia:
@@ -21,21 +21,64 @@ algolia:
   indexName: '...'
 ```
 
-- **applicationID** - Your application Id
-- **apiKey** - Your API key (for read-only operation, like search)
-- **indexName** - The name of the Algolia index to use
+| Config Key | |
+| --- | --- |
+| `applicationID` | Your Algolia Application ID |
+| `apiKey` | A **Search-Only** API key |
+| `indexName` | The name of the Algolia index to use |
 
-You can access them from your hexo theme in order to [instantiate the algolia client with the JavaScript client](https://www.algolia.com/doc/guides/search/auto-complete/#user-interface):
+These configuration values are **accessible from your hexo theme**, to be used with [Algolia JavaScript client](https://www.algolia.com/doc/guides/search/auto-complete/#user-interface).
+
+## Hexo Helpers
+
+Helpers are provided to make your life easier.
+
+### Algolia JavaScript Client Tags
+
+The plugin provides an easy way to add [Algolia JavaScript API Client][js-client] either _locally_ (served by hexo) or _remotely_ (via Algolia CDN).
 
 ```html
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<%- algolia_search() %>
+```
 
+Renders as:
+
+```html
+<script src="/assets/algolia/algoliasearchLite.min.js" async></script>
+```
+
+```html
+<%- algolia_search_cdn() %>
+```
+
+Renders as:
+
+```html
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js" async></script>
+```
+
+### Configuration `<meta>` Tag
+
+You can make your index configuration available to your page and client-side scripts by adding the `algolia_config()` hexo helper in the `<head>` of your document.
+
+```html
+<%- algolia_config() %>
+```
+
+Renders as:
+
+```html
+<meta property="algolia:search" data-application-id="..." data-api-key="..." data-index-name="...">
+```
+
+You can access the exposed configuration by querying the [`data attribute`](dataset) of the `algolia:search` meta tag:
+
+```html
 <script>
-var client = algoliasearch("<%- site.config.algolia.applicationID %>", "<%- site.config.algolia.apiKey %>");
-var index = client.initIndex('<%- site.config.algolia.indexName %>');
+const algoliaConfig = document.querySelector('meta[property="algolia:search"]').dataset;
 
-// ...
+const client = algoliasearch(algoliaConfig.applicationID, algoliaConfig.apiKey);
+const index = client.initIndex(algoliaConfig.indexName);
 </script>
 ```
 
@@ -78,5 +121,7 @@ Options:
 
 
 
+[js-client]: https://www.algolia.com/doc/api-client/javascript/
 [batching]: https://www.algolia.com/doc/guides/indexing/import-synchronize-data/#batching
 [security]: https://www.algolia.com/doc/guides/security/api-keys/
+[dataset]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
