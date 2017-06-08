@@ -1,17 +1,60 @@
 /* globals hexo:false, console:false*/
 'use strict';
 
+var fs = require('fs');
+var path = require('path');
 var command = require('./lib/command');
-var searchCdnHelper = require('./lib/helpers/search_cdn.js');
+var searchTagHelper = require('./lib/helpers/search_tag.js');
 var searchConfigHelper = require('./lib/helpers/search_config.js');
 
-hexo.extend.console.register('algolia', 'Index your content in Algolia Search API', {
-  options: [
-		{name: '--chunk-size=5000', desc: 'Chunk size for each batch of content to index'},
-    {name: '--dry-run', desc: 'Does not push content to Algolia'},
-    {name: '--flush', desc: 'Does not reset the Algolia index before starting the indexation'}
-  ]
-}, command);
+var KNOWN_ASSETS = [
+  'algoliasearchLite.min.js',
+  'algoliasearchLite.js',
+  'algoliasearch.min.js',
+  'algoliasearch.js'
+];
 
-hexo.extend.helper.register('algolia_search_cdn', searchCdnHelper);
-hexo.extend.helper.register('algolia_search_config', searchConfigHelper(hexo.config));
+hexo.extend.console.register(
+  'algolia',
+  'Index your content in Algolia Search API',
+  {
+    options: [
+      {
+        name: '--chunk-size=5000',
+        desc: 'Chunk size for each batch of content to index'
+      },
+      { name: '--dry-run', desc: 'Does not push content to Algolia' },
+      {
+        name: '--flush',
+        desc: 'Does not reset the Algolia index before starting the indexation'
+      }
+    ]
+  },
+  command
+);
+
+hexo.extend.helper.register(
+  'algolia_search_cdn',
+  searchTagHelper.fromCDN.bind(null, hexo)
+);
+hexo.extend.helper.register(
+  'algolia_search',
+  searchTagHelper.fromNpmPackage.bind(null, hexo)
+);
+hexo.extend.helper.register(
+  'algolia_search_config',
+  searchConfigHelper(hexo.config)
+);
+
+hexo.extend.generator.register('algolia', function(locals) {
+  return KNOWN_ASSETS.map(function(assetFile) {
+    var sourceFile = require.resolve('algoliasearch/dist/' + assetFile);
+
+    return {
+      path: path.join('assets', 'algolia', assetFile),
+      data: function() {
+        return fs.createReadStream(sourceFile);
+      }
+    };
+  });
+});
