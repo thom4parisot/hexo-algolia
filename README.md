@@ -117,7 +117,13 @@ Options:
 
 ### Security Concerns
 
-**Never use your _Admin API Key_** to index content — you might leak it by mistake and **it gives full control of your to others**. [Please read the Security guide thoroughly][security].
+**Never store your _Admin API Key_** as `apiKey` in the `_config.yml` file: **it would give full control of your Algolia index to others** and [you don't want to face the consequences][daily-mirror-bonanza].
+
+[Please read Algolia Security guide thoroughly][security] if you need some more informations about this.
+
+# License
+
+[MIT](LICENSE)
 
 
 
@@ -125,3 +131,4 @@ Options:
 [batching]: https://www.algolia.com/doc/guides/indexing/import-synchronize-data/#batching
 [security]: https://www.algolia.com/doc/guides/security/api-keys/
 [dataset]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+[daily-mirror-bonanza]: http://www.mirror.co.uk/all-about/cybersecurity
