@@ -62,7 +62,7 @@ Renders as:
 You can make your index configuration available to your page and client-side scripts by adding the `algolia_config()` hexo helper in the `<head>` of your document.
 
 ```html
-<%- algolia_config() %>
+<%- algolia_search_config() %>
 ```
 
 Renders as:
