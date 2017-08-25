@@ -42,7 +42,7 @@ hexo.extend.helper.register(
   searchConfigHelper(hexo.config)
 );
 
-hexo.extend.generator.register('algolia', function(locals) {
+hexo.extend.generator.register('algolia', function() {
   return KNOWN_ASSETS.map(function(assetFile) {
     var sourceFile = require.resolve('algoliasearch/dist/' + assetFile);
 
