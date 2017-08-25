@@ -7,8 +7,8 @@
     "lib": "./lib"
   },
   "scripts": {
-    "posttest": "jshint *.js ./lib",
-    "test": "exit 0"
+    "test": "exit 0",
+    "posttest": "eslint *.js ./lib"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,6 @@
     "p-each-series": "^1.0.0"
   },
   "devDependencies": {
-    "jshint": "^2.9.5"
+    "eslint": "^4.3.0"
   }
 }
