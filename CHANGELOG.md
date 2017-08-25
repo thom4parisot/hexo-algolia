@@ -1,5 +1,9 @@
 # hexo-algolia changelog
 
+## v1.2.1, 2017-08-25
+
+- add clearer signposting for error reasons, esp no API key or Admin Key provided ([#22](https://github.com/oncletom/hexo-algolia/pull/22), [#15](https://github.com/oncletom/hexo-algolia/issues/15))
+
 ## v1.2.0, 2017-08-25
 
 - remove chunk size from options — the default was decreased from `5000` to `50` items at a time
