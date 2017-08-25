@@ -32,11 +32,11 @@
   },
   "homepage": "https://github.com/oncletom/hexo-algolia",
   "dependencies": {
-    "algoliasearch": "^3.4.0",
-    "lodash": "^4.17.4"
+    "algoliasearch": "^3.24.3",
+    "lodash": "^4.17.4",
+    "p-each-series": "^1.0.0"
   },
   "devDependencies": {
-    "jshint": "^2.9.3"
-  },
-  "false": {}
+    "jshint": "^2.9.5"
+  }
 }
