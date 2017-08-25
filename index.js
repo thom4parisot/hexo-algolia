@@ -19,10 +19,6 @@ hexo.extend.console.register(
   'Index your content in Algolia Search API',
   {
     options: [
-      {
-        name: '--chunk-size=5000',
-        desc: 'Chunk size for each batch of content to index'
-      },
       { name: '--dry-run', desc: 'Does not push content to Algolia' },
       {
         name: '--flush',

@@ -110,7 +110,6 @@ Description:
 Index your content in Algolia Search API
 
 Options:
-  --chunk-size=5000  Chunk size for each batch of content to index
   --dry-run          Does not push content to Algolia
   --flush            Does not reset the Algolia index before starting the indexation
 ```
