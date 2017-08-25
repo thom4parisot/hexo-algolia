@@ -1,6 +1,8 @@
 # hexo-algolia [![Build Status](https://travis-ci.org/oncletom/hexo-algolia.svg?branch=master)](https://travis-ci.org/oncletom/hexo-algolia)
 
-> Index content in Algolia Search API.
+> Index content of an [hexo][] website in [Algolia][] and provide JavaScript helpers to add search in your [hexo theme][].
+
+Browse the [CHANGELOG][] to learn what has changed between versions.
 
 ## Install
 
@@ -125,6 +127,11 @@ Options:
 [MIT](LICENSE)
 
 
+[hexo]: https://hexo.io/
+[Algolia]: https://www.algolia.com/
+[hexo theme]: https://hexo.io/docs/themes.html
+
+[CHANGELOG]: https://github.com/oncletom/hexo-algolia/blob/master/CHANGELOG.md
 
 [js-client]: https://www.algolia.com/doc/api-client/javascript/
 [batching]: https://www.algolia.com/doc/guides/indexing/import-synchronize-data/#batching
