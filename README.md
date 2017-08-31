@@ -1,4 +1,4 @@
-# hexo-algolia [![Build Status](https://travis-ci.org/oncletom/hexo-algolia.svg?branch=master)](https://travis-ci.org/oncletom/hexo-algolia)
+# hexo-algolia [![Build Status][]][pkg-build] ![][pkg-downloads] ![][pkg-version]
 
 > Index content of an [hexo][] website in [Algolia][] and provide JavaScript helpers to add search in your [hexo theme][].
 
@@ -126,6 +126,10 @@ Options:
 
 [MIT](LICENSE)
 
+[Build Status]: https://travis-ci.org/oncletom/hexo-algolia.svg?branch=master
+[pkg-build]: https://travis-ci.org/oncletom/hexo-algolia
+[pkg-downloads]: https://img.shields.io/npm/dm/hexo-algolia.svg
+[pkg-version]: https://img.shields.io/npm/v/hexo-algolia.svg
 
 [hexo]: https://hexo.io/
 [Algolia]: https://www.algolia.com/
