@@ -1,5 +1,10 @@
 # hexo-algolia changelog
 
+## v1.2.2, 2017-08-31
+
+- Do not index `page.content` as it causes the indexing to fail if it is bigger than 10kB ([#24](https://github.com/oncletom/hexo-algolia/pull/24), [#15](https://github.com/oncletom/hexo-algolia/issues/15))
+- Index `page.updated` (and its `page.updated_as_int` counterpart) [#24](https://github.com/oncletom/hexo-algolia/pull/24)
+
 ## v1.2.1, 2017-08-25
 
 - add clearer signposting for error reasons, esp no API key or Admin Key provided ([#22](https://github.com/oncletom/hexo-algolia/pull/22), [#15](https://github.com/oncletom/hexo-algolia/issues/15))
