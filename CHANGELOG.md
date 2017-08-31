@@ -1,9 +1,13 @@
 # hexo-algolia changelog
 
+## v1.2.3, 2017-08-31
+
+- remove lodash from dependencies ([#25](https://github.com/oncletom/hexo-algolia/pull/25))
+
 ## v1.2.2, 2017-08-31
 
-- Do not index `page.content` as it causes the indexing to fail if it is bigger than 10kB ([#24](https://github.com/oncletom/hexo-algolia/pull/24), [#15](https://github.com/oncletom/hexo-algolia/issues/15))
-- Index `page.updated` (and its `page.updated_as_int` counterpart) [#24](https://github.com/oncletom/hexo-algolia/pull/24)
+- do not index `page.content` as it causes the indexing to fail if it is bigger than 10kB ([#24](https://github.com/oncletom/hexo-algolia/pull/24), [#15](https://github.com/oncletom/hexo-algolia/issues/15))
+- index `page.updated` (and its `page.updated_as_int` counterpart) [#24](https://github.com/oncletom/hexo-algolia/pull/24)
 
 ## v1.2.1, 2017-08-25
 
