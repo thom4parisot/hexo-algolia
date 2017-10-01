@@ -28,8 +28,21 @@ algolia:
 | `applicationID` | Your Algolia Application ID |
 | `apiKey` | A **Search-Only** API key |
 | `indexName` | The name of the Algolia index to use |
+| `include` | Optional list of custom front-matter properties to add to the index  |
 
 These configuration values are **accessible from your hexo theme**, to be used with [Algolia JavaScript client](https://www.algolia.com/doc/guides/search/auto-complete/#user-interface).
+
+### Add Custom Properties to the Index
+
+All default Hexo front-matter properties will be added to the index. Optionally, you can add your own custom properties to the index via the `include` list. 
+
+``` yaml
+algolia:
+  include:
+    - featured_image
+    - custom_property
+```
+
 
 ## Hexo Helpers
 
