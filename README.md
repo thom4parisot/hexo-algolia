@@ -113,7 +113,7 @@ Index your content in Algolia Search API
 
 Options:
   --dry-run          Does not push content to Algolia
-  --flush            Does not reset the Algolia index before starting the indexation
+  --flush            Resets the Algolia index before starting the indexation
 ```
 
 ### Security Concerns
