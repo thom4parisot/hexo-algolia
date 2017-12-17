@@ -22,7 +22,7 @@ hexo.extend.console.register(
       { name: '--dry-run', desc: 'Does not push content to Algolia' },
       {
         name: '--flush',
-        desc: 'Does not reset the Algolia index before starting the indexation'
+        desc: 'Resets the Algolia index before starting the indexation'
       }
     ]
   },
