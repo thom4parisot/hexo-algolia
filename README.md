@@ -79,7 +79,7 @@ You can access the exposed configuration by querying the [`data attribute`](data
 <script>
 const algoliaConfig = document.querySelector('meta[property="algolia:search"]').dataset;
 
-const client = algoliasearch(algoliaConfig.applicationID, algoliaConfig.apiKey);
+const client = algoliasearch(algoliaConfig.applicationId, algoliaConfig.apiKey);
 const index = client.initIndex(algoliaConfig.indexName);
 </script>
 ```
