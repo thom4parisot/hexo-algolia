@@ -1,5 +1,14 @@
 # hexo-algolia changelog
 
+## v1.2.5, 2018-04-05
+
+- index tags/categories only if they are arrays ([#33](https://github.com/oncletom/hexo-algolia/issues/33))
+- update dependencies ([3b8bfce](https://github.com/oncletom/hexo-algolia/commit/3b8bfce))
+
+## v1.2.4, 2017-12-17
+
+- Fix `--flush` flag documentation ([#30](https://github.com/oncletom/hexo-algolia/pull/30))
+
 ## v1.2.3, 2017-08-31
 
 - remove lodash from dependencies ([#25](https://github.com/oncletom/hexo-algolia/pull/25))
