@@ -33,10 +33,10 @@
   },
   "homepage": "https://github.com/oncletom/hexo-algolia",
   "dependencies": {
-    "algoliasearch": "^3.24.3",
+    "algoliasearch": "^3.26.0",
     "p-each-series": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.3.0"
+    "eslint": "^4.19.1"
   }
 }
