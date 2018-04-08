@@ -1,7 +1,7 @@
 {
   "name": "hexo-algolia",
   "version": "1.2.5",
-  "description": "Index your content in Algolia Search API",
+  "description": "Index content of your hexo website in Algolia and add search within minutes.",
   "main": "index",
   "directories": {
     "lib": "./lib"

@@ -1,12 +1,23 @@
 # hexo-algolia [![Build Status][]][pkg-build] ![][pkg-downloads] ![][pkg-version]
 
-> Index content of an [hexo][] website in [Algolia][] and provide JavaScript helpers to add search in your [hexo theme][].
+> Index content of your [hexo][] website in [Algolia][] and add search within minutes.
 
-Browse the [CHANGELOG][] to learn what has changed between versions.
+`hexo-algolia` is an [hexo][] plugin provided by the community.
+This is what you get when you install it:
+
+1. a **new command**, `hexo algolia`, to index the content of your website
+2. a **theme helper** to include Algolia search client
+3. another **theme helper** to configure the Algolia search client
+
+👌 The `hexo algolia` command can be run manually on your computer
+and on a continuous integration system like [Travis CI][-ci-node].
+
+📜 Browse the [CHANGELOG][] to learn what has changed between versions.
+⬢ Compatible with `node>=4.0.0`.
+
+[hexo theme][]
 
 ## Install
-
-Compatible with `node>=4.0.0`.
 
 ```bash
 $ npm install --save hexo-algolia
@@ -31,13 +42,14 @@ algolia:
 
 These configuration values are **accessible from your hexo theme**, to be used with [Algolia JavaScript client](https://www.algolia.com/doc/guides/search/auto-complete/#user-interface).
 
-## Hexo Helpers
+## Hexo Theme Setup
 
 Helpers are provided to make your life easier.
 
-### Algolia JavaScript Client Tags
+### Include Algolia JavaScript Client
 
-The plugin provides an easy way to add [Algolia JavaScript API Client][js-client] either _locally_ (served by hexo) or _remotely_ (via Algolia CDN).
+The `algolia_search` theme helper adds the
+[Algolia search client][js-client] to your pages.
 
 ```html
 <%- algolia_search() %>
@@ -49,17 +61,8 @@ Renders as:
 <script src="/assets/algolia/algoliasearchLite.min.js" async></script>
 ```
 
-```html
-<%- algolia_search_cdn() %>
-```
 
-Renders as:
-
-```html
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js" async></script>
-```
-
-### Configuration `<meta>` Tag
+### Configure Algolia JavaScript Client
 
 You can make your index configuration available to your page and client-side scripts by adding the `algolia_config()` hexo helper in the `<head>` of your document.
 
@@ -67,26 +70,27 @@ You can make your index configuration available to your page and client-side scr
 <%- algolia_search_config() %>
 ```
 
-Renders as:
+Once done, you can retrieve Algolia configuration by querying the
+[`data attribute`](dataset) of the `algolia:search` meta tag.
 
-```html
-<meta property="algolia:search" data-application-id="..." data-api-key="..." data-index-name="...">
-```
-
-You can access the exposed configuration by querying the [`data attribute`](dataset) of the `algolia:search` meta tag:
-
-```html
-<script>
+```js
 const algoliaConfig = document.querySelector('meta[property="algolia:search"]').dataset;
 
 const client = algoliasearch(algoliaConfig.applicationID, algoliaConfig.apiKey);
 const index = client.initIndex(algoliaConfig.indexName);
-</script>
 ```
+
+### Display Search Results
+
+It is now up to you to use the aforementioned example to trigger a search
+and display the results in your page.
+
+If you need some help, have a look at the [search client doc][js-client]
+and [the tutorials][Algolia tutorials].
 
 ## Indexing Content
 
-Content can be indexed from the _command line_ with the help of the `hexo algolia` command.
+Content is indexed with the help of the `hexo algolia` command.
 
 ```bash
 $ ./node_modules/.bin/hexo algolia
@@ -134,6 +138,8 @@ Options:
 [hexo]: https://hexo.io/
 [Algolia]: https://www.algolia.com/
 [hexo theme]: https://hexo.io/docs/themes.html
+[travis-ci-node]: https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+[Algolia Tutorials]: https://www.algolia.com/doc/tutorials/
 
 [CHANGELOG]: https://github.com/oncletom/hexo-algolia/blob/master/CHANGELOG.md
 
