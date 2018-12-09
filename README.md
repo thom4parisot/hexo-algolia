@@ -116,8 +116,11 @@ Description:
 Index your content in Algolia Search API
 
 Options:
-  --dry-run          Does not push content to Algolia
-  --flush            Resets the Algolia index before starting the indexation
+  --dry-run       Does not push content to Algolia (default: false).
+  --flush         Resets the Algolia index before starting the indexation (default: false).
+  --indexing-key  An algolia API key with add/delete records permissions.
+		  It should be different than the search-only API key configured in _config.yml.
+  --layouts       A comma-separated list of page layouts to index (default: "page").
 ```
 
 ### Security Concerns

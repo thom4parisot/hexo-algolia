@@ -1,5 +1,14 @@
 # hexo-algolia changelog
 
+## v1.3.0, 2018-12-09
+
+- trailing `index.html` are trimmed from page permalinks ([83f55a0](https://github.com/oncletom/hexo-algolia/commit/83f55a0))
+- select which page layouts can be indexed ([922277c](https://github.com/oncletom/hexo-algolia/commit/922277c))
+- provide an indexing API key from the command line ([fd5ae30](https://github.com/oncletom/hexo-algolia/commit/fd5ae30))
+- index the `image` property ([7990bed](https://github.com/oncletom/hexo-algolia/commit/7990bed))
+- restore `post.categories` and `post.tags indexing` ([830ef22](https://github.com/oncletom/hexo-algolia/commit/830ef22))
+- update `algoliasearch` to `v3.31.0` ([f1f27a6](https://github.com/oncletom/hexo-algolia/commit/f1f27a6))
+
 ## v1.2.5, 2018-04-05
 
 - index tags/categories only if they are arrays ([#33](https://github.com/oncletom/hexo-algolia/issues/33))
