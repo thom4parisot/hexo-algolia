@@ -19,10 +19,21 @@ hexo.extend.console.register(
   'Index your content in Algolia Search API',
   {
     options: [
-      { name: '--dry-run', desc: 'Does not push content to Algolia' },
+      {
+        name: '--dry-run',
+        desc: 'Does not push content to Algolia (default: false).'
+      },
       {
         name: '--flush',
-        desc: 'Resets the Algolia index before starting the indexation'
+        desc: 'Resets the Algolia index before starting the indexation (default: false).'
+      },
+      {
+        name: '--layouts',
+        desc: 'A comma-separated list of page layouts to index (default: "page").',
+      },
+      {
+        name: '--indexing-key',
+        desc: 'An algolia API key with add/delete records permissions.\n\t\t  It should be different than the search-only API key configured in _config.yml.',
       }
     ]
   },
