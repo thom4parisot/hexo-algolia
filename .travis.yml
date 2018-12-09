@@ -1,14 +1,12 @@
 language: node_js
-sudo: false
 node_js:
 - v4
 - v6
 - node
 deploy:
   provider: npm
-  email: hi@oncletom.io
-  api_key:
-    secure: N2AcPDtm/YpdzB1cliPc9Hp3SuoHnr4teXYWqbsSP7/g3R8hRRQSnA3MjaoxpzlvxoGfKfHI/q9ipfO6u6tEwPMIzxItFbrWw2Fm4BXDImiz9EzoZA7Xm/yr2NzbKlCqVvsoK3GO8iY4ij3FqfOypeQ51XgJz6jAGMBpKhM8g32R8BK70CHuUQ+gIKRUmgn+FT+GHDiXFxmWUESbJY7m4CMBQwdbNpAkVmFaHQ1569iz8ZF1TG/5nIZfi7kKhXb+GFWfWbhUJ+1Wo1LI8nNQgjm+4VvOkfxBRYR2hwHbgsnCkP/pkyD3Sf7wFuUI4C7TbcE3I1/JDaqRHss7SLVzlQjYIbT3OHhjWUj1I1rRtkdYl+Q1SGn4JDcYtEOcBi0/LKUyG1PRkMMyJuAgb4tcHKh/xKNBzAYmJFCgMC02xFDTgZSe22bM9xjm9uLqec2crK528OyF/3ijzcLui17SXghGJsbh716hK1cQKxSJaMkzxh0zXKbzygRZMidbQz0zCTeRsDItEVfPVBI2Hrgug2BxEv1HgyPP5QqEGgdbjKu+84VscZtSIa7WXbPdJdjBYbDkwrXBWAsM+2pVXPyDHrtak7yMu1z8LPhb3qYmR62c2r6OYIs/7cnHCTLO4i4K5MJYRAcWYI9WA6tYnSnF14y3Uk7+5SBfRnU4oCv6IpQ=
+  email: $NPM_USER_EMAIL
+  api_key: "$NPM_TOKEN"
   on:
     tags: true
     repo: oncletom/hexo-algolia
