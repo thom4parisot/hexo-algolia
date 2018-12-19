@@ -1,5 +1,10 @@
 # hexo-algolia changelog
 
+## v1.3.1, 2018-12-19
+
+- display the number of records in the batch and content types to index ([eb2ef14](https://github.com/oncletom/hexo-algolia/commit/eb2ef14))
+- wait for clearIndex task completion before moving to the indexing part ([a7218ab](https://github.com/oncletom/hexo-algolia/commit/a7218ab))
+
 ## v1.3.0, 2018-12-09
 
 - trailing `index.html` are trimmed from page permalinks ([83f55a0](https://github.com/oncletom/hexo-algolia/commit/83f55a0))
