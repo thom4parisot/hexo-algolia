@@ -76,7 +76,7 @@ Once done, you can retrieve Algolia configuration by querying the
 ```js
 const algoliaConfig = document.querySelector('meta[property="algolia:search"]').dataset;
 
-const client = algoliasearch(algoliaConfig.applicationID, algoliaConfig.apiKey);
+const client = algoliasearch(algoliaConfig.applicationId, algoliaConfig.apiKey);
 const index = client.initIndex(algoliaConfig.indexName);
 ```
 
