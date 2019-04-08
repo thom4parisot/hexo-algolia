@@ -121,6 +121,7 @@ Options:
   --indexing-key  An algolia API key with add/delete records permissions.
 		  It should be different than the search-only API key configured in _config.yml.
   --layouts       A comma-separated list of page layouts to index (default: "page").
+  --max-raw-size  raw length(k), default is 8k.
 ```
 
 ### Security Concerns
