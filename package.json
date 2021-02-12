@@ -1,6 +1,6 @@
 {
   "name": "hexo-algolia",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Index content of your hexo website in Algolia and add search within minutes.",
   "main": "index",
   "directories": {
