@@ -1,5 +1,9 @@
 # hexo-algolia changelog
 
+## v1.3.2, 2021-02-12
+
+- update [algolia API client](https://www.algolia.com/doc/api-client/) to `v3.35.1`
+
 ## v1.3.1, 2018-12-19
 
 - display the number of records in the batch and content types to index ([eb2ef14](https://github.com/oncletom/hexo-algolia/commit/eb2ef14))
